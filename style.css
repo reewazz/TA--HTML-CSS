@@ -1,0 +1,66 @@
+
+
+
+h1 {
+    color: brown;
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#dark {
+
+
+    background-color: #000;
+    color: #ccc;
+}
+
+
+
+
+#dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+.highlight {
+    background-color: #33cc33;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+#second:hover {
+    border: 1px #cc00cc dotted;
+    transform: scale(1.5);
+
+}
+
+
+
+
+
+
+
+
+
+
+#second > h2 {
+    color: #f00;
+    background-color: #000;
+}
+
+

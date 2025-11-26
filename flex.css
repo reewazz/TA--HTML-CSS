@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 32px;
+}
+
+
+.card{
+    padding: 32px;
+    width: 400px;
+background-color: #efefefef;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    gap:32px;
+    border: 1px solid #f0eeeeef ;
+    border-radius: 8px;
+    border-bottom: 10px solid #26235C;
+    
+}
+
+
+button{
+    background-color: #26235C;
+    color: white;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
