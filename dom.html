@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+</head>
+
+<style>
+    .container {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        height: 200px;
+        width: 300px;
+        border: 1px solid black;
+    }
+
+    .rounded {
+        border-radius: 50%;
+    }
+
+    span:hover {
+        color: red;
+    }
+</style>
+
+
+<body>
+    <h1 id="header">DOM practice</h1>
+    <span>
+        span tag
+    </span>
+
+
+    <div class="container">
+        <div class="box " id="box-1" onclick="clickfunction()">box 1</div>
+        <div class="box" id="box-2">box 2</div>
+        <div class="box" id="box-3">box3</div>
+    </div>
+    <input type="text" id="input">
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
