@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+        <h1> Form Validation </h1>
+        <div>
+            <input type="text" id="name" placeholder="Enter your name">
+            <p id="namemsg"></p>
+        </div>
+
+        <input type="email" id="email" placeholder="Enter your email">
+        <input type="age" id="age" placeholder="Enter your age">
+        <button id="submit">submit</button>
+        <p id="msg"></p>
+
+    </div>
+
+    <script>
+        const button = document.querySelector('#submit')
+        button.addEventListener('click', () => {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const age = document.getElementById('age').value.trim();
+            const msg = document.getElementById('msg')
+            const namemsg = document.getElementById('namemsg')
+
+            // if (!name || !email || !age) {
+            //     msg.innerText = "Validation error please fill all the field"
+            //     msg.style.color = "red"
+            // }
+            // else {
+            //     msg.textContent = " form submitted succesfully"
+            //     msg.style.color = "green"
+
+            // }
+            if (!name) {
+                namemsg.innerText = "please fill your name"
+                namemsg.style.color = "red"
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

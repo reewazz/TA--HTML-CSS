@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="display: flex; justify-content: space-between; padding: 12vw;">
+        <div>
+            <span id="likes" class="spanvalue">0</span>
+            <span class="spanvalue">1</span>
+
+            <h1>Likes</h1>
+        </div>
+
+        <div>
+            <span id="dislikes">0</span>
+            <h1>Dislikes</h1>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 32px;">
+        <button onclick="setLikes()">👍</button>
+        <button onclick="setDislikes()">👎</button>
+    </div>
+
+
+    <div style="display: flex; gap: 32px; justify-content: center; margin-top: 40px;">
+        <button onclick="sub()">-</button>
+        <span id='count'>0</span>
+        <button onclick="add()">+</button>
+
+    </div>
+
+    <script>
+        let likes = 0
+
+        let dislikes = 0
+
+        let count = 0
+
+        function setLikes() {
+            // likes++;
+            const spanvalue = document.querySelectorAll('.spanvalue')
+            console.log(spanvalue);
+
+            spanvalue.innerText = likes
+        }
+        function sub() {
+            count--
+        }
+
+    </script>
+</body>
+
+</html>

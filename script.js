@@ -39,6 +39,9 @@ hello?.addEventListener('mouseover',(e)=>{
 
 
 const forminput = document.getElementById('input')
-forminput?.addEventListener('keydown',(e)=>{
-    console.log("inside input",e.key)
-})
+// forminput?.addEventListener('keydown',(e)=>{
+//     console.log("inside input",e.key)
+// })
+forminput.style.border = "2px solid red"
+// forminput.style.borderColor = "red"
+// forminput.style.outline = "none"
