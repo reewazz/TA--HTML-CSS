@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>iOS Calculator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont;
+        }
+
+        body {
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            width: 320px;
+            padding: 20px;
+            border-radius: 30px;
+            background: black;
+        }
+
+        .display {
+            color: white;
+            font-size: 60px;
+            text-align: right;
+            padding: 20px 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            height: 65px;
+            border-radius: 50%;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .dark {
+            background: #333;
+            color: white;
+        }
+
+        .light {
+            background: #a5a5a5;
+            color: black;
+        }
+
+        .operator {
+            background: #ff9f0a;
+            color: white;
+        }
+
+        .zero {
+            grid-column: span 2;
+            border-radius: 40px;
+            text-align: left;
+            padding-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+
+        <div class="buttons">
+            <button class="light" onclick="clearAll()">AC</button>
+            <button class="light">±</button>
+            <button class="light" onclick="calc('/100')">%</button>
+            <button class="operator" onclick="calc('/')">÷</button>
+
+            <button class="dark" onclick="calc('7')">7</button>
+            <button class="dark" onclick="calc('8')">8</button>
+            <button class="dark" onclick="calc('9')">9</button>
+            <button class="operator" onclick="calc('*')">×</button>
+
+            <button class="dark" onclick="calc('4')">4</button>
+            <button class="dark" onclick="calc('5')">5</button>
+            <button class="dark" onclick="calc('6')">6</button>
+            <button class="operator" onclick="calc('-')">−</button>
+
+            <button class="dark" onclick="calc('1')">1</button>
+            <button class="dark" onclick="calc('2')">2</button>
+            <button class="dark" onclick="calc('3')">3</button>
+            <button class="operator" onclick="calc('+')">+</button>
+
+            <button class="dark zero" onclick="calc('0')">0</button>
+            <button class="dark" onclick="calc('.')">.</button>
+            <button class="operator" onclick="getResult()">=</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let exp = "0"
+        const display = document.getElementById('display')
+        marks = 30
+
+        // if(marks>40){
+        //     marksresult ="pass"
+        // }
+        // else{
+        //    marksresult= "Fail"
+        // }
+        marksresult = marks > 40 ? "Pass" : "Fail"
+        console.log(marksresult)
+        function calc(value) {
+
+            exp = exp === "0" ? value : exp + value
+
+            display.innerText = exp
+        }
+
+
+        function clearAll() {
+            exp = "0"
+            display.innerText = exp
+        }
+
+        function getResult() {
+            try {
+                result = eval(exp)
+                display.innerText = result
+            }
+            catch (error) {
+                display.innerText = "Error"
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
